@@ -30,7 +30,7 @@ Learning Objectives:
 ### C. Flowchart
 link gambar
 
-### D. Penjelasan Function
+### D. Function Explanation
 Here is the explanation of each function:
 
 1.  `__init__`: This function is used to initialize a transaction object with empty attributes and create a connection to the SQLite database 'transactions.db'. The `create_table` function is called to create the transaction table if it does not already exist.
@@ -65,4 +65,4 @@ Here is the test case
 5. Test 5 (checkout)
    
 ### F. Saran Perbaikan
-### Conclusion
+### G. Conclusion
