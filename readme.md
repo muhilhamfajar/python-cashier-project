@@ -28,7 +28,7 @@ Learning Objectives:
 -   Connect to SQLite database.
 
 ### C. Flowchart
-link gambar
+![Flowchart](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/Pacmann%20supermarket%20flowchart.png?raw=true)
 
 ### D. Function Explanation
 Here is the explanation of each function:
@@ -59,10 +59,21 @@ Here is the explanation of each function:
 Before running test cases, I have created unit tests to ensure that each small part of the code program runs as expected in isolation.
 Here is the test case
 1. Test 1 (add item)
-2. Test 2 (modify item)
-3. Test 3 (delete item)
-4. Test 4 (reset transaction)
-5. Test 5 (checkout)
+![Test 1](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/test_1.png?raw=true)
+
+2. Test 2 (delete item)
+![Test 1](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/test_2.png?raw=true)
+
+3. Test 3 (reset transaction)
+![Test 1](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/test_3.png?raw=true)
+
+4. Test 4 (checkout)
+![Test 1](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/test_4-0.png?raw=true)
+
+![Test 1](https://github.com/muhilhamfajar/python-cashier-project/blob/main/img/test_4-1.png?raw=true)
+
    
-### F. Saran Perbaikan
-### G. Conclusion
+### F. Conclusion
+This project presents a Python project that creates a self-service cashier system for a supermarket, with a connection to an SQLite database. The project aims to enable users to place, modify, and check orders, as well as to checkout and pay for them. All orders are saved in a database. The project is designed to help the programmer learn Python, develop modular and clean code, create required features, document code with docstrings, implement error handling, and connect to SQLite.
+
+The project includes a flowchart that visualizes the supermarket cashier system and explains 11 functions that facilitate various actions like adding, updating, and deleting items, checking orders, creating and inserting data into a transaction table, checking out, and resetting transactions. The project also includes test cases to ensure the program runs as expected.
