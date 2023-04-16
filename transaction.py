@@ -1,7 +1,7 @@
 import sqlite3
 
 class Transaction:
-    """Class to handle transactions."""
+    """Class to process transactions."""
 
     def __init__(self):
         """Initialize an empty transaction."""
@@ -9,7 +9,7 @@ class Transaction:
         self.conn = sqlite3.connect('transactions.db')
         self.create_table()
 
-    def add_item(self, *items):
+    def add_items(self, *items):
         """Add one or more items to the transaction.
 
         Args:
@@ -36,6 +36,7 @@ class Transaction:
         try:
             if name in self.items:
                 self.items[new_name] = self.items.pop(name)
+                return True
             else:
                 print(f"Item '{name}' not found.")
         except KeyError:
@@ -51,6 +52,7 @@ class Transaction:
         try:
             if name in self.items:
                 self.items[name]['quantity'] = new_qty
+                return True
             else:
                 print(f"Item '{name}' not found.")
         except KeyError:
@@ -66,6 +68,7 @@ class Transaction:
         try:
             if name in self.items:
                 self.items[name]['price'] = new_price
+                return True
             else:
                 print(f"Item '{name}' not found.")
         except KeyError:
@@ -80,6 +83,7 @@ class Transaction:
         try:
             if name in self.items:
                 del self.items[name]
+                return True
             else:
                 print(f"Item '{name}' not found.")
         except KeyError:
@@ -151,8 +155,6 @@ class Transaction:
         except sqlite3.Error as e:
             print("Error while inserting data into the transactions table:", e)
 
-    # ... (Sisanya kode yang ada sebelumnya)
-
     def check_out(self):
         """Calculate the total price of the transaction and apply discounts, then insert the transaction data into the SQLite database."""
 
@@ -183,6 +185,7 @@ class Transaction:
                 source_data = (item_name, quantity, price, item_total, discount, discounted_total)
                 self.insert_to_table(source_data)
 
+            self.reset_transaction()
             print("Transaksi berhasil disimpan ke dalam database.")
 
         except Exception as e:
